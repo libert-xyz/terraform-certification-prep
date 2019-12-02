@@ -21,7 +21,7 @@ resource "aws_eip" "ip" {
   vpc      = true
   instance = aws_instance.example.id
 
-  provisioner "local-exec" {
-  command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
-}
+  # provisioner "local-exec" {
+  #   command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
+  # }
 }
